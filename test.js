@@ -1,7 +1,7 @@
 (function (exports){
   //exports.assert
   exports.assert = function(a, b, msg){
-    if(a==b){
+    if(a === b){
       console.log(msg ? msg : "passed");
       return 1;
     } else {
