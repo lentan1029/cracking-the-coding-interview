@@ -12,7 +12,6 @@ Create a linked list
     hasCycle()
     inOrder(callback)
     length()
-
 */
 
 
@@ -29,7 +28,7 @@ LinkedList.prototype.add = function(data){
 
   if(this.start === null) {
     this.start = newNode;
-  } else {}
+  } else {
     this.end.next = newNode;
   }
 
@@ -45,7 +44,7 @@ LinkedList.prototype.remove = function(data){
   var prevNode = null;
   var currNode = this.start;
 
-  while(data !== currNode.data || currNode !== null){
+  while(currNode !== null && data !== currNode.data){
     prevNode = currNode;
     currNode = currNode.next;
   }
@@ -73,20 +72,19 @@ var Node = function(data) {
 }
 
 //examples
+
+//tests
+var Test = require("./test.js");
+//Test.assert(A, B.next);
 var L = new LinkedList();
 L.add("hello");
 L.add("it's");
 L.add("me");
 L.add("...again");
-L.remove();
-
-
-//tests
-var Test = require("./test.js");
-//Test.assert(A, B.next);
-console.log(Object.getPrototypeOf(NaN))
-
-
+Test.assert(L.length, 4);
+L.remove("me");
+Test.assert(L.start.next.next.data, "...again");
+Test.assert(L.length, 3);
 
 
 
