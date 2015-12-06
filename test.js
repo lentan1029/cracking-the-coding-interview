@@ -5,7 +5,7 @@
       console.log(msg ? msg : "passed");
       return 1;
     } else {
-      console.log("failed");
+      console.log("failed, " + a + " !== " + b);
       return 0;
     }
   };
