@@ -46,7 +46,7 @@ SplayTree.prototype.splay = function (node){
 
 
   function zigzag(node, type){ //rotate node twice
-    if(type == "left-right"){ //optimise?
+    if(type == "left-right"){ 
       rotateLeft(node);
       rotateRight(node);
     } else if (type == "right-left"){
