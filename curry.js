@@ -1,6 +1,6 @@
 var curry = function(fn){
   var expectedLength = fn.length;
-  var storedArguments = [];//we  store our arguments here
+  var storedArguments = [];//we store our arguments here
   var curriedFn = function(){ //we want to return a function that waits till it gets more arguments
     storedArguments = storedArguments.concat(Array.prototype.slice.call(arguments, 0))
     if (storedArguments.length >= expectedLength){ //when we finally get all our arguments, we call the function

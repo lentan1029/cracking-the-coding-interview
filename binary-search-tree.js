@@ -4,7 +4,7 @@ all elements to the left of the tree are smaller or equal to the parent
 
 Insert
 Delete
-Balance
+Balance - not implemented
 
 
 */
